@@ -73,7 +73,7 @@ export default class App extends Component {
       <>
         <div className="container">
           <h1>Notas Atuais</h1>
-          <div>
+          <div className="border">
             {modules.map((currentGrades) => {
               const { id, description } = currentGrades;
               return (

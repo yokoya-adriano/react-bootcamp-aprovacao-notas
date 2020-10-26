@@ -15,6 +15,7 @@ export default class Notas extends Component {
       <div>
         <label>{moduleName} </label>
         <input
+          style={grades >= 60 ? styles.toColorGreen : styles.toColorRed}
           type="number"
           min="0"
           max="100"
@@ -25,3 +26,14 @@ export default class Notas extends Component {
     );
   }
 }
+
+const styles = {
+  toColorRed: {
+    color: 'red',
+    fontWeight: 'bold',
+  },
+  toColorGreen: {
+    color: 'green',
+    fontWeight: 'bold',
+  },
+};

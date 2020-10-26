@@ -22,3 +22,16 @@ code {
 .padding {
   padding: 10px;
 }
+
+.border {
+  border: 1px solid lightgray;
+  border-radius: 7px;
+  margin: 10px 15px 10px 15px;
+  padding: 10x;
+}
+
+.container {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}

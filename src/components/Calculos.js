@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { averageGrades } from '../helpers/calculateGrades';
 import { formatPercent } from '../helpers/formatHelpers';
+import css from './calculo.module.css';
 
 export default class Calculos extends Component {
   render() {
@@ -16,13 +17,17 @@ export default class Calculos extends Component {
         </span>
         <br></br>
         <label>Aprovação pela média (60%): </label>
-        {average60Percent ? <span>Sim</span> : <span>Não</span>}
+        {average60Percent ? (
+          <span className={css.approved}>Sim</span>
+        ) : (
+          <span className={css.disapproved}>Não</span>
+        )}
         <br></br>
         <label>Aprovação pelo percentual total: </label>
         {averageGrades(totalGrades, modules.length) >= 70 ? (
-          <span>Sim</span>
+          <span className={css.approved}>Sim</span>
         ) : (
-          <span>Não</span>
+          <span className={css.disapproved}>Não</span>
         )}
       </div>
     );
