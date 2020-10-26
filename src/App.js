@@ -71,9 +71,8 @@ export default class App extends Component {
     const { modules, totalGrades, average60Percent } = this.state;
     return (
       <>
-        <div>
+        <div className="container">
           <h1>Notas Atuais</h1>
-
           <div>
             {modules.map((currentGrades) => {
               const { id, description } = currentGrades;
